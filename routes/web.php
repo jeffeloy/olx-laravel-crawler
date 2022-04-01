@@ -17,3 +17,5 @@ use App\Http\Controllers\CrawlerController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/crawler', [CrawlerController::class, 'olxCrawler'])->name('crawler');
