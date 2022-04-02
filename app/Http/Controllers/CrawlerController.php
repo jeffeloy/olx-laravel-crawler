@@ -3,23 +3,31 @@
 namespace App\Http\Controllers;
 
 use Goutte\Client;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
 class CrawlerController extends Controller
 {
     private $item;
     private $results = array();
-    private $url = 'https://olx.com.br/autos-e-pecas/carros-vans-e-utilitarios?q=';
+    private $url = '';
 
-    public function olxCrawler($search = null)
+    public function olxCrawler(Request $request)
     {
         $client = new Client();
+        $data = $request->query->all();
+
+        $search = $data['search'];
+        $fuel = $data['fuel'];
+        $numberDoors = $data['numberDoors'];
+
+        $this->url = 'https://olx.com.br/autos-e-pecas/carros-vans-e-utilitarios' . $fuel . '?q=';
 
         if (Cache::has($search)) {
             return Cache::get($search);
         }
 
-        $page =  $client->request('GET', $this->url . $search);
+        $page =  $client->request('GET', $this->url . $search . '&' . $numberDoors);
 
         $page->filter('.fnmrjs-1')->each(function ($item, $key) {
 
