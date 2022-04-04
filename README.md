@@ -55,11 +55,8 @@ git clone https://github.com/jeffeloy/olx-laravel-crawler/
 | Após ter o projeto clonado e já está dentro da pasta olx-laravel-crawler.
 
 1. Execute `cp .env.example .env` para criar o .env.
-2. Execute `composer install` para instalar as dependências.
-3. Execute `php artisan key:generate` para gerar uma chave para aplicação.
-4. Execute `id -u` para pegar o id do seu user, se o retorno desde comando for diferente de 1000, copie o número e substitua no valor de uid no arquivo docker-compose.yml.
-5. Execute `docker-compose up` para rodar aplicação.
-6. Acesse o navegador e digite `http://127.0.0.1:8000`.
+2. Execute `docker-compose up` para rodar aplicação.
+3. Acesse o navegador e digite `http://127.0.0.1:8000`.
 
 ## :open_book: License
 
