@@ -1,64 +1,75 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+   <img src="./.github/header-logo.svg" width="150"/>
 </p>
 
-## About Laravel
+# :car: OneSearch
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> Permiti buscar anúncios de veículos na OLX através de um crawler.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[![GitHub Stars][github-stars]][github-stars]
+[![Build Status][build-status]][build-status]
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Aplicação é uma api crawler que permiti a busca de anúncios de véiculos na OLX.
 
-## Learning Laravel
+<p align="center">
+  <img src="./.github/home.png">
+</p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## :nazar_amulet: Objetivo
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| Desenvolver um api que permita extrair informações de um site.
 
-## Laravel Sponsors
+## :black_nib: Justificativa
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+| Teste técnico para uma vaga de emprego.
 
-### Premium Partners
+## :man_technologist: Autor
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+| Foto                                                                                                                             | Nome                      | GitHub                                   | Likedin                                                 | E-mail                    |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ---------------------------------------- | ------------------------------------------------------- | ------------------------- |
+| <img src="https://avatars2.githubusercontent.com/u/56545903?s=400&u=7445f50f4a7c02a76fef37d74a1f84b2bf2c7109&v=4" width="100px"> | Jefferson de Santana Eloy | [Jefferson](https://github.com/jeffeloy) | [Linkedin](https://www.linkedin.com/in/jefferson-eloy/) | contatojeloydev@gmail.com |
 
-## Contributing
+## :computer: Tecnologias
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- [Laravel](https://laravel.com/docs/9.x)
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
 
-## Code of Conduct
+## Observação
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+De ontem para hoje por algum motivo houveram mudanças no site da OLX que fizeram o crawler parar de funcionar, porém já resolvi os problemas e está funcionando novamente.
+Mas se caso ao testarem não tiver funcionando a parte do crawler, pode ser por conta de alguma nova mudança no site da OLX.
 
-## Security Vulnerabilities
+Segue um link para o vídeo com aplicação funcionando:
+[OneSearch](https://drive.google.com/file/d/1SUVMsYqV8dvQx0_IO7_BpYu7GAlUDmdC/view?usp=sharing)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## :construction_worker: Pré Requisitos
 
-## License
+Você precisa instalar o [Docker](https://www.docker.com/) e o [Docker Compose](https://docs.docker.com/compose/) primeiro e, em seguida clone o repositório executando este comando:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+git clone https://github.com/jeffeloy/olx-laravel-crawler/
+```
+
+## :wrench: Executar o projeto
+| Após ter o projeto clonado e já está dentro da pasta olx-laravel-crawler.
+
+1. Execute `cp .env.example .env` para criar o .env.
+2. Execute `composer install` para instalar as dependências.
+3. Execute `php artisan key:generate` para gerar uma chave para aplicação.
+4. Execute `docker-compose up` para rodar aplicação.
+5. Acesse o navegador e digite `http://127.0.0.1:8000`.
+
+## :open_book: License
+
+Lançado em 2020.
+Este projeto está sob a [MIT license](https://github.com/jeffeloy/olx-laravel-crawler/blob/master/LICENSE).
+
+<p align="center">
+    Feito com :heart: por <a href="https://github.com/jeffeloy">Jefferson Eloy</a>
+</p>
+
+<!-- Markdown link & img dfn's -->
+
+[github-stars]: https://img.shields.io/github/stars/jeffeloy/olx-laravel-crawler?logoColor=04D361&style=social
+[build-status]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?color=04D361&style=plastic
