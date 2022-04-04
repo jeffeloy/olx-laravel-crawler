@@ -23,8 +23,8 @@ class CrawlerController extends Controller
 
         $this->url = 'https://olx.com.br/autos-e-pecas/carros-vans-e-utilitarios' . $fuel . '?q=';
 
-        if (Cache::has($search)) {
-            return Cache::get($search);
+        if (Cache::has($search . $fuel . $numberDoors)) {
+            return Cache::get($search . $fuel . $numberDoors);
         }
 
         $page =  $client->request('GET', $this->url . $search . '&' . $numberDoors);
@@ -45,7 +45,7 @@ class CrawlerController extends Controller
         });
 
         if (count($this->results) > 0 && $search) {
-            Cache::put($search, $this->results, 60 * 60 * 1); // 1 hour
+            Cache::put($search . $fuel . $numberDoors, $this->results, 60 * 60 * 1); // 1 hour
         }
 
         return response($this->results);
