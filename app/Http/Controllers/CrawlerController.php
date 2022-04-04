@@ -29,21 +29,21 @@ class CrawlerController extends Controller
 
         $page =  $client->request('GET', $this->url . $search . '&' . $numberDoors);
 
-        $page->filter('.fnmrjs-1')->each(function ($item, $key) {
+        $page->filter('.gSNULD')->each(function ($item, $key) {
 
             $this->item = $item;
 
             $this->results[$key] = [
                 'title' => $this->getText('h2'),
                 'image' => $this->getImg(),
-                'description' => $this->getText('.iNpuEh > div:nth-child(3) > span'),
-                'price' => $this->getText('p'),
-                'date' =>  $this->getText('.gHqbSa > div > div > span:nth-child(1)'),
-                'time' => $this->getText('.gHqbSa > div > div > span:nth-child(2)'),
-                'location' => $this->getText('.gmtqTp > span'),
+                'description' => $this->getText('.fqDYpJ > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)'),
+                'price' => $this->getText('.fqDYpJ > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)'),
+                'date' =>  $this->getText('.fqDYpJ > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > span'),
+                'time' => $this->getText('.fqDYpJ > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > span'),
+                'location' => $this->getText('.fqDYpJ > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span'),
             ];
         });
-
+        
         if (count($this->results) > 0 && $search) {
             Cache::put($search . $fuel . $numberDoors, $this->results, 60 * 60 * 1); // 1 hour
         }
