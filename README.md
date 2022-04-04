@@ -1,64 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+   <img src="./.github/header-logo.svg" width="150"/>
 </p>
 
-## About Laravel
+# :man_teacher: :man_student: Proffy
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> Promove a conexão entre professores e alunos com o objetivo de terem aulas online.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[![NPM Version][npm-version]][npm-version]
+[![NPM License][npm-license]][npm-license]
+[![GitHub Stars][github-stars]][github-stars]
+[![Build Status][build-status]][build-status]
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Aplicação é uma plataforma de estudos online que permite a conexão entre professores e alunos para terem aulas online. O professores cadastram seus dados pessoais e informações sobre as aulas e dias disponivéis, os alunos acessam essas informações e entram em contato com os professores.
 
-## Learning Laravel
+<p align="center">
+  <video width="780px" controls autoplay loop>
+    <source src="./.github/introvideo.mp4" type="video/mp4">
+  </video>
+</p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## :nazar_amulet: Objetivo
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| Resolvi adicionar essa aplicação ao meu portifólio pela grande quantidade de conhecimentos que poderei absorver. E para aumentar o meu domínio sobre o ecossistema do JavaScript e essa incrível stack (NodeJS,React e React Native).
 
-## Laravel Sponsors
+## :black_nib: Justificativa
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+| No dia 06 de agosto é comemorado o Dia Nacional do Profissional de Educação, logo esta aplicação visa homenagea-los e disponibilizar um produto para eles.
 
-### Premium Partners
+## :man_technologist: Autor
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+| Foto                                                                                                                             | Nome                      | GitHub                                   | Likedin                                                 | E-mail                    |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ---------------------------------------- | ------------------------------------------------------- | ------------------------- |
+| <img src="https://avatars2.githubusercontent.com/u/56545903?s=400&u=7445f50f4a7c02a76fef37d74a1f84b2bf2c7109&v=4" width="100px"> | Jefferson de Santana Eloy | [Jefferson](https://github.com/jeffeloy) | [Linkedin](https://www.linkedin.com/in/jefferson-eloy/) | contatojeloydev@gmail.com |
 
-## Contributing
+## :computer: Tecnologias
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Backend - [Node.js](https://nodejs.org/en/)
+- Frontend - [React](https://reactjs.org)
+- Mobile - [React Native](https://facebook.github.io/react-native/)
 
-## Code of Conduct
+## :construction_worker: Instalação
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Você precisa instalar o [Node.js](https://nodejs.org/en/download/) primeiro e, em seguida clone o repositório executando este comando:
 
-## Security Vulnerabilities
+```
+git clone https://github.com/jeffeloy/proffy.git
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## :wrench: Instalar dependências
 
-## License
+### :gear: Backend
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Para entrar na pasta digite `cd backend`.
+2. Execute `npm install` para instalar as dependências;
+3. Execute `npm run dev` para iniciar o servidor.
+
+### :desktop_computer: Frontend
+
+1. Para entrar na pasta digite `cd web`
+2. Execute `npm install` para instalar as dependências;
+3. Execute `npm start` para iniciar a aplicação;
+
+### :iphone: Mobile
+
+1. Para entrar na pasta digite `cd mobile`
+2. Execute `npm install` para instalar as dependências;
+3. Execute `npm start` para iniciar o aplicativo;
+
+## :handshake: Contribuindo
+
+Confira a página [CONTRIBUTING](https://github.com/jeffeloy/proffy/blob/master/CONTRIBUTING.md) página para ver os melhores locais para arquivar problemas, iniciar discussões e começar a contribuir.
+
+## :open_book: License
+
+Lançado em 2020.
+Este projeto está sob a [MIT license](https://github.com/jeffeloy/proffy/blob/master/LICENSE).
+
+<p align="center">
+    Feito com :heart: por <a href="https://github.com/jeffeloy">Jefferson Eloy</a>
+</p>
+
+<!-- Markdown link & img dfn's -->
+
+[github-stars]: https://img.shields.io/github/stars/jeffeloy/proffy?logoColor=04D361&style=social
+[npm-license]: https://img.shields.io/npm/l/express?color=47248F&style=plastic
+[npm-version]: https://img.shields.io/npm/v/npm?color=47248F&style=plastic
+[build-status]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?color=04D361&style=plastic
