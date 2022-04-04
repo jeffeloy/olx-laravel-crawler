@@ -45,7 +45,7 @@ Segue um link para o vídeo com aplicação funcionando:
 
 ## :construction_worker: Pré Requisitos
 
-Você precisa instalar o [Docker](https://www.docker.com/) e o [Docker Compose](https://docs.docker.com/compose/) primeiro e, em seguida clone o repositório executando este comando:
+Você precisa instalar o [Composer](https://getcomposer.org/doc/00-intro.md), [Docker](https://www.docker.com/) e o [Docker Compose](https://docs.docker.com/compose/) primeiro e, em seguida clone o repositório executando este comando:
 
 ```
 git clone https://github.com/jeffeloy/olx-laravel-crawler/
@@ -57,8 +57,9 @@ git clone https://github.com/jeffeloy/olx-laravel-crawler/
 1. Execute `cp .env.example .env` para criar o .env.
 2. Execute `composer install` para instalar as dependências.
 3. Execute `php artisan key:generate` para gerar uma chave para aplicação.
-4. Execute `docker-compose up` para rodar aplicação.
-5. Acesse o navegador e digite `http://127.0.0.1:8000`.
+4. Execute `id -u` para pegar o id do seu user, se o retorno desde comando for diferente de 1000, copie o número e substitua no valor de uid no arquivo docker-compose.yml.
+5. Execute `docker-compose up` para rodar aplicação.
+6. Acesse o navegador e digite `http://127.0.0.1:8000`.
 
 ## :open_book: License
 
