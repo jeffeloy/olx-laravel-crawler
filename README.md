@@ -11,11 +11,9 @@
 
 Aplicação é uma api crawler que permiti a busca de anúncios de véiculos na OLX.
 
-<div align="center">
-  <video width="780px" controls autoplay loop>
-    <source src="./.github/introvideo.mp4" type="video/mp4">
-  </video>
-</div>
+<p align="center">
+  <img src="./.github/home.png">
+</p>
 
 ## :nazar_amulet: Objetivo
 
@@ -37,9 +35,17 @@ Aplicação é uma api crawler que permiti a busca de anúncios de véiculos na 
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
+## Observação
+
+De ontem para hoje por algum motivo houveram mudanças no site da OLX que fizeram o crawler parar de funcionar, porém já resolvi os problemas e está funcionando novamente.
+Mas se caso ao testarem não tiver funcionando a parte do crawler, pode ser por conta de alguma nova mudança no site da OLX.
+
+Segue um link para o vídeo com aplicação funcionando:
+[OneSearch](https://drive.google.com/file/d/1SUVMsYqV8dvQx0_IO7_BpYu7GAlUDmdC/view?usp=sharing)
+
 ## :construction_worker: Pré Requisitos
 
-Você precisa instalar o [Docker](https://www.docker.com/) e o [Docker Compose](https://docs.docker.com/compose/) primeiro e, em seguida clone o repositório executando este comando:
+Você precisa instalar o [Composer](https://getcomposer.org/doc/00-intro.md), [Docker](https://www.docker.com/) e o [Docker Compose](https://docs.docker.com/compose/) primeiro e, em seguida clone o repositório executando este comando:
 
 ```
 git clone https://github.com/jeffeloy/olx-laravel-crawler/
@@ -51,17 +57,10 @@ git clone https://github.com/jeffeloy/olx-laravel-crawler/
 1. Execute `cp .env.example .env` para criar o .env.
 2. Execute `composer install` para instalar as dependências.
 3. Execute `php artisan key:generate` para gerar uma chave para aplicação.
-4. Execute `docker-compose up` para rodar aplicação.
-5. Acesse o navegador e digite `http://127.0.0.1:8000`.
+4. Execute `id -u` para pegar o id do seu user, se o retorno desde comando for diferente de 1000, copie o número e substitua no valor de uid no arquivo docker-compose.yml.
+5. Execute `docker-compose up` para rodar aplicação.
+6. Acesse o navegador e digite `http://127.0.0.1:8000`.
 
-
-## Observação
-
-De ontem para hoje por algum motivo houveram mudanças no site da OLX que fizeram o crawler parar de funcionar, porém já resolvi os problemas e está funcionando novamente.
-Mas se caso ao testarem não tiver funcionando a parte do crawler, pode ser por conta de alguma nova mudança no site da OLX.
-
-Segue um link para o vídeo com aplicação funcionando:
-[OneSearch](https://drive.google.com/file/d/1SUVMsYqV8dvQx0_IO7_BpYu7GAlUDmdC/view?usp=sharing)
 ## :open_book: License
 
 Lançado em 2020.
