@@ -58,6 +58,16 @@ git clone https://github.com/jeffeloy/olx-laravel-crawler/
 2. Execute `docker-compose up` para rodar aplicação.
 3. Acesse o navegador e digite `http://127.0.0.1:8000`.
 
+## :wrench: Rota da API
+| Para testar a rota do crawler na api.
+
+1. Acesse o navegador e digite `http://127.0.0.1:8000/api/crawler`.
+2. Parâmetros obrigatórios:
+  - `search`: Nome do carro: Ex: Palio
+  - `fuel`: Combustivel: Ex:gasolina
+  - `numberDoors`: Número de portas: Ex:2
+
+
 ## :open_book: License
 
 Lançado em 2020.

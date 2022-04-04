@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Goutte\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
@@ -16,10 +17,19 @@ class CrawlerController extends Controller
     {
         $client = new Client();
         $data = $request->query->all();
+        
+        if(!isset($data['search']) || !isset($data['fuel']) || !isset($data['numberDoors'])){
+            return response()->json([
+                'result' => 'error',
+                'data' => 'Missing required params',
+            ], 404);
+        }
 
         $search = $data['search'];
-        $fuel = $data['fuel'];
-        $numberDoors = $data['numberDoors'];
+        $fuel = str_contains($data['fuel'],'/') ? $data['fuel'] : '/' . $data['fuel'];
+        $numberDoors = str_contains($data['numberDoors'],'cad=') ? $data['numberDoors'] : 'cad=' . $data['numberDoors'];
+
+        
 
         $this->url = 'https://olx.com.br/autos-e-pecas/carros-vans-e-utilitarios' . $fuel . '?q=';
 
